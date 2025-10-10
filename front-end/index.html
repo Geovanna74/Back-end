@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap-grid.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js"></script>
+
+<body>
+
+    <div class="container">
+        <div class="mb-3 row"> <style = width: 500px;></style>
+           
+            <label for="staticEmail" class="col-sm-2 col-form-label">E-mail</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control-plaintext" id="staticEmail">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword">
+            </div>
+
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+
+    </div>
+    </form>
+
+    </div>
+
+
+
+
+</body>
+
+<script>
+   
+   document.getElementById('frmLogin').addEventListener('submit', function(){
+
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    const url = "localhost:3000/login";
+
+
+    fetch(url, {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json",
+            "Accept": 'application/json'
+         },
+         body: JSON.stringify({email,senha})
+    })
+
+    .then((res) =>{
+        if(!res.ok)
+        console.log("Error ao fazer login")
+        return res.json();
+    }).then((data) =>{
+         if(data)
+         return alert("login bem sucedido!")
+    })
+     .catch((error ) => console.log(error))
+   });
+
+
+
+</script>
+
+</html>
