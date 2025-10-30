@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELA</title>
+
+    <style>
+        .comment-box {
+  display: none;
+  margin-top: 10px;
+}
+
+.comment-box.visible {
+  display: block;
+}
+
+.liked {
+  color: red;
+  font-weight: bold;
+}
+
+.user-comment {
+  margin: 5px 0 0 10px;
+  font-size: 14px;
+  color: #ddd;
+  border-left: 2px solid #666;
+  padding-left: 6px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="logs-container"><div class="log">
+        <div class="log-header">
+          <div class="log-info">
+            <div class="meta">
+              <b>João</b><br>
+              <small>2 horas atrás</small>
+            </div>
+          </div>
+          <span class="category">Programação</span>
+        </div>
+  
+        <h3>Sistema de Inventário Implementado</h3>
+        <p>Finalizei a implementação do sistema de inventário do jogo. Agora os jogadores podem coletar, organizar e usar itens de forma intuitiva.</p>
+        <p>⏱️ 8h • 💻 245 linhas • 👾 12 bugs corrigidos</p>
+  
+        <div class="log-footer">
+          <div>
+            <button class="btn like-btn">❤️ </button>
+            <button class="btn comment-btn">💬 8</button>
+          </div>
+        </div>
+  
+        <div class="comment-box">
+          <input type="text" placeholder="Escreva um comentário...">
+          <button class="btn">Enviar</button>
+        </div>
+      </div><div class="log">
+        <div class="log-header">
+          <div class="log-info">
+            <div class="meta">
+              <b>Lely</b><br>
+              <small>5 horas atrás</small>
+            </div>
+          </div>
+          <span class="category">Arte 3D</span>
+        </div>
+  
+        <h3>Modelagem de Personagens Concluída</h3>
+        <p>Terminei a modelagem dos personagens principais. Agora partindo para as animações e rigging.</p>
+        <p>⏱️ 12h • 💻 0 linhas • 👾 3 bugs corrigidos</p>
+  
+        <div class="log-footer">
+          <div>
+            <button class="btn like-btn">❤️ 19</button>
+            <button class="btn comment-btn">💬 5</button>
+          </div>
+        </div>
+  
+        <div class="comment-box">
+          <input type="text" placeholder="Escreva um comentário...">
+          <button class="btn">Enviar</button>
+        </div>
+      </div></div>
+</body>
+
+<script src="/back-end/script.js"></script>
+</html>
